@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/dist/output.css">
+</head>
+
+<body>
+    <div class=" flex justify-center items-center h-screen w-screen bg-gray-300">
+        <div class="bg-gray-900 h-80 w-80 rounded-xl shadow-lg shadow-gray-500">
+
+            <form class="">
+                <div class="text-center  ">
+                    <h1 class=" font-bold text-3xl my-12 mb-1 animate-bounce text-green-400">Login</h1>
+
+                    <div id="campoEmail" class=" ml-16 mt-4 mb-4 flex justify-start items-center text-center relative">
+                        <input id="e-mail" type="email" 
+                            class=" text-sm outline-none rounded-md  pl-5 absolute w-48 bg-white"
+                            placeholder="Usuário/Email">
+                        <ion-icon class="  ml-1 w-4 h-4 absolute  " name="person-outline"></ion-icon>
+                    </div>
+                    <div class=" ml-16 mt-4 flex justify-start  items-center text-center ">
+                        <input id="senha" type="password"
+                            class=" text-sm outline-none rounded-md  pl-5  w-48 relative bg-white"
+                            placeholder="Digite sua senha..." maxlength="14">
+                        <ion-icon class="  ml-1 w-4 h-4 absolute" name="lock-closed-outline"></ion-icon>
+                        <ion-icon id="eyeClosed" onclick="mostrarSenha()" name="eye-off-outline"
+                            class=" text-center  w-4 h-4 absolute cursor-pointer"></ion-icon>
+                        <ion-icon id="eyeOpen" onclick="mostrarSenha()" name="eye-outline"
+                            class="  text-center w-4 h-4 absolute cursor-pointer"></ion-icon>
+                    </div>
+
+                    <p id="text" class="text-xs  text-red-700 ml-14 absolute peer-invalid:visible mt-1 invisible ">
+                        Por favor, preencha os campos vázios!
+                    </p>
+                    <p id="text2"
+                        class="text-xs text-center absolute text-red-700 invisible peer-invalid:visible mt-1 ml-8">
+                        Por favor, forneça um endereço de e-mail válido <br> ou uma senha válida.
+                    </p>
+                    <p id="text3"
+                        class="text-xs text-center absolute text-green-400 invisible peer-invalid:visible mt-1 ml-28">
+                        Acesso Liberado
+                    </p>
+                </div>
+
+            </form>
+            <div class="botao flex justify-center mt-2 ">
+                <button id="botao" class="bg-green-300 h-8 w-36 mt-8  rounded-3xl text-white font-bold "
+                    onclick="clickEvent()">Logar</button>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg .com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
